@@ -1,5 +1,31 @@
 #include "fileReader.h"
 
+
+void fileReader::Control()
+{
+    GetAllFilesInData();
+
+    for (const std::string & fileName : inputFiles)
+    {
+
+        std::ifstream CSVFile(std::string(PATH_TO_INPUT_DATA) + "/" + fileName);
+        
+        if (!CSVFile.is_open())
+        {
+            std::cerr << "ERROR: Could not open" << fileName << std::endl;
+            continue;
+        }
+        
+        // TODO
+        std::cerr << fileName << " opened" << std::endl;
+
+
+    }
+
+    return;
+}
+
+
 void fileReader::GetAllFilesInData()
 {
 

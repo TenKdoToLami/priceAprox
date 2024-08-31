@@ -6,9 +6,10 @@
 
 
 #include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
-
+#include <iostream>
 
 class fileReader
 {
@@ -17,9 +18,22 @@ private:
 public:
     std::vector < std::string > inputFiles;
 
+
     fileReader() = default;
 
+
     ~fileReader() = default;
+
+
+    /**
+     * @brief The main control function of the fileReader class.//+
+     *
+     * This function orchestrates the reading of input files and performs necessary operations.
+     * It calls the GetAllFilesInData function to retrieve a list of input files, and then processes each file as required.
+     *
+     * @return void This function does not return any value.//+
+     *///
+    void Control();
 
 
     /**
@@ -30,10 +44,9 @@ public:
      *
      * @param PATH_TO_INPUT_DATA The path to the directory to be scanned.
      *
-     * @return A vector of strings, where each string is the filename of a regular file found in the specified directory.
+     * @return inputFiles A vector of strings, where each string is the filename of a regular file found in the specified directory.
      */
     void GetAllFilesInData();
-
 
 
 };

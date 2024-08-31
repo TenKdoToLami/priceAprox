@@ -6,8 +6,8 @@
 int main(int argc, char const *argv[])
 {
     fileReader reader;
-    
-    reader.GetAllFilesInData();
+
+    reader.Control();
 
     return EXIT_SUCCESS;
 }
