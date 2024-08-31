@@ -1,6 +1,5 @@
 CXX = g++
-CXXFLAGS = -std=c++11 -Wall
-LIBS = -lcurl
+CXXFLAGS = -std=c++17 -Wall
 
 SRCDIR = src
 INCDIR = include
