@@ -16,8 +16,9 @@ void fileReader::Control()
             continue;
         }
         
-        // TODO
         std::cerr << fileName << " opened" << std::endl;
+
+        ReadDataFromFile(CSVFile);
 
 
     }
@@ -37,6 +38,25 @@ void fileReader::GetAllFilesInData()
         }
     }
 
+
+    return;
+}
+
+void fileReader::ReadDataFromFile(std::ifstream &CSVFile)
+{
+    std::string line;
+
+    // Discards first line with column descriptions
+    if (CSVFile.is_open())
+        getline(CSVFile,line);
+
+    while (CSVFile.is_open() && getline(CSVFile,line))
+    {
+        getline(CSVFile,line);
+        lineFormat format(line);
+        //  Debugging purposes only
+        //  format.print();
+    }
 
     return;
 }
