@@ -1,10 +1,25 @@
+/**
+ * @file lineFormat.h
+ * @brief This file contains the declaration of the lineFormat struct.
+ *
+ * The lineFormat struct is used to represent a single line of financial data from a CSV file.
+ * It contains member variables for date, open, high, low, close, adjusted close, and volume.
+ * The struct also includes a constructor to parse a CSV line and extract the data,
+ * and a print function to display the data members.
+ */
+
+
 #ifndef LINE_FORMAT_H
 #define LINE_FORMAT_H
+
 
 #include <iostream>
 #include <sstream>
 
 
+/**
+ * @brief The lineFormat struct represents a single line of financial data from a CSV file.
+ */
 struct lineFormat
 {
     std::string date;
@@ -14,7 +29,6 @@ struct lineFormat
     long double close;
     long double adjClose;
     long long int volume;
-
 
 
     /**
@@ -41,6 +55,8 @@ struct lineFormat
      * @return void
      */
     void print() const;
+
+    
 };
 
-#endif // FILE_READER_H
+#endif // LINE_FORMAT_H
