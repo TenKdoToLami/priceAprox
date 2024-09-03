@@ -19,15 +19,28 @@ struct cumulativePerDate
 class cumulativeTokens
 {
 private:
+    long double cumulativeAmountOfCoins = 0;
+    long double currentPricePerCoin;
+    Date currentDate;
+    std::vector <cumulativePerDate> tokens;
 
 public:
-    std::vector <cumulativePerDate> tokens;
 
 
     cumulativeTokens() = default;
 
 
     ~cumulativeTokens() = default;
+
+
+    void initializeValues(const long double dailyBuyingPower, const long double pricePerCoin, const Date & date);
+
+
+    void saveRecord();
+
+
+    void regularSaveRecord(const int frequency);
+
 
 
 };

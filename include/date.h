@@ -23,6 +23,9 @@ struct Date
     Date(int day, int month, int year);
 
 
+    Date() = default;
+
+
     /**
      * @brief Overloads the assignment operator for the Date class.
      *
