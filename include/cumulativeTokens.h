@@ -2,11 +2,26 @@
 #define CUMULATIVE_TOKENS_H
 
 
+#include <vector>
+
+
+#include "date.h"
+
+
+struct cumulativePerDate
+{
+    long double amountOfCoins;
+    long double value;
+    Date date;
+};
+
+
 class cumulativeTokens
 {
 private:
 
 public:
+    std::vector <cumulativePerDate> tokens;
 
 
     cumulativeTokens() = default;
@@ -18,4 +33,4 @@ public:
 };
 
 
-#endif CUMULATIVE_TOKENS_H
+#endif // CUMULATIVE_TOKENS_H

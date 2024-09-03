@@ -7,4 +7,7 @@
 #include <vector>
 
 
+#include "fileReader.h"
+
+
 #endif // MAIN_H

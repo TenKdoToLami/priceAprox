@@ -17,18 +17,14 @@
 #include <sstream>
 
 
+#include "date.h"
+
+
 /**
  * @brief The lineFormat struct represents a single line of financial data from a CSV file.
  */
 struct lineFormat
 {
-    struct Date
-    {
-        int day;
-        int month;
-        int year;
-    };
-
     Date date;
     long double open;
     long double high;
