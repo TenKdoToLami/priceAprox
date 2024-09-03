@@ -4,7 +4,14 @@ lineFormat::lineFormat(const std::string & line)
 {
     std::istringstream ss(line);
 
-    std::getline(ss, date, ','); // Extract the date as a string
+    ss >> date.year;    // Read the next number (open year)
+    ss.ignore();   // Ignore the dash
+
+    ss >> date.month;    // Read the next number (open month)
+    ss.ignore();   // Ignore the dash
+    
+    ss >> date.day;    // Read the next number (open day)
+    ss.ignore();   // Ignore the comma
 
     ss >> open;    // Read the next number (open price)
     ss.ignore();   // Ignore the comma
@@ -29,7 +36,7 @@ lineFormat::lineFormat(const std::string & line)
 
 void lineFormat::print() const
 {
-    std::cout << "Date: " << date << std::endl;
+    std::cout << "Date: " << date.day << "." << date.month << "." << date.year << std::endl;
     std::cout << "Open: " << open << std::endl;
     std::cout << "High: " << high << std::endl;
     std::cout << "Low: " << low << std::endl;

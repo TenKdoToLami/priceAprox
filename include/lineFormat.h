@@ -22,7 +22,14 @@
  */
 struct lineFormat
 {
-    std::string date;
+    struct Date
+    {
+        int day;
+        int month;
+        int year;
+    };
+
+    Date date;
     long double open;
     long double high;
     long double low;

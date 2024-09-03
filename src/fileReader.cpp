@@ -52,7 +52,7 @@ void fileReader::ReadDataFromFile(std::ifstream &CSVFile)
 
     while (CSVFile.is_open() && getline(CSVFile,line))
     {
-        getline(CSVFile,line);
+        //getline(CSVFile,line);
         lineFormat format(line);
         //  Debugging purposes only
         //  format.print();
